@@ -1,18 +1,16 @@
 document.addEventListener('DOMContentLoaded', event => {
 
     const app = firebase.app();
+
+
 })
 
-function googleLogin() {
-    const provider = new firebase.auth.GoogleAuthProvider();
+function uploadFile(files) {
+    const storageRef = ref(getStorage(), 'phone.jpg');
 
-    firebase.auth().signInWithPopup(provider)
+    const file = files.item(0);
 
-    .then(result => {
-        const user = result.user;
-        document.write(`Hello ${user.displayName}`)
-        console.log(user)
+    uploadBytes(storageRef, file).then((snapshot) => {
+        console.log("Uploaded a file")
     })
-
-    .catch(console.log)
 }

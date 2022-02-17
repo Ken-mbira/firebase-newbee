@@ -10,7 +10,7 @@
     <script defer src="/__/firebase/9.6.6/firebase-app-compat.js"></script>
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/9.6.6/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.6.6/firebase-database-compat.js"></script>
+    <!-- <script defer src="/__/firebase/9.6.6/firebase-database-compat.js"></script> -->
     <script defer src="/__/firebase/9.6.6/firebase-firestore-compat.js"></script>
     <script defer src="/__/firebase/9.6.6/firebase-functions-compat.js"></script>
     <script defer src="/__/firebase/9.6.6/firebase-messaging-compat.js"></script>
@@ -26,8 +26,9 @@
 </head>
 
 <body>
-    <button onClick="googleLogin()">Login With Google</button>
-    <script src="app.js"></script>
+    <input id="upload-image" type="file" onChange="uploadFile(this.files)">
+    <img src="" id="image-display">
+    <script type="module" src="app.js"></script>
 </body>
 
 </html>
